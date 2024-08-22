@@ -1,6 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { BAKEND_URL } from "../../utilitis/Utiliti"
-import axios from "axios";
 import axiosInstance from "../../utilitis/axiosInstance";
 
 
@@ -29,8 +27,12 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk(
     'auth/login',
     async (data, { rejectWithValue }) => {
+        console.log(data,"data");
+        
         try {
             const response = await axiosInstance.post("users/login",data);
+            console.log(response,"response");
+            
 
             if (response.status === 200) {
                 
