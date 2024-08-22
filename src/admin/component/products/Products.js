@@ -22,7 +22,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getsubcategory } from '../../../redux/slice/subcategories.slice';
 import { getCategory } from '../../../redux/action/Category.action';
 
-const API_URL = 'http://localhost:8000/api/v1/products';
+const API_URL = 'https://fruitable-server-beta.vercel.app/api/v1/products';
 
 export default function Product() {
   const dispatch = useDispatch();
